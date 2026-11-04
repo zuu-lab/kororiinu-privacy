@@ -1,0 +1,382 @@
+<!doctype html>
+<title>ころりーぬ Privacy Policy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fff8fb;
+    --surface: #ffffff;
+    --text: #4a3a48;
+    --subtle: #8a7887;
+    --accent: #e8739c;
+    --on-accent: #ffffff;
+    --soft: #fbe3ec;
+    --line: #f3dde6;
+    --line-strong: #e9c3d3;
+    --purple: #b79be8;
+    color-scheme: light;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1720;
+      --surface: #261f2a;
+      --text: #f1e6ee;
+      --subtle: #b3a2b0;
+      --accent: #f08db0;
+      --on-accent: #2a1c24;
+      --soft: #3a2a35;
+      --line: #3a2f3d;
+      --line-strong: #54435a;
+      --purple: #c6b0f0;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1c1720;
+    --surface: #261f2a;
+    --text: #f1e6ee;
+    --subtle: #b3a2b0;
+    --accent: #f08db0;
+    --on-accent: #2a1c24;
+    --soft: #3a2a35;
+    --line: #3a2f3d;
+    --line-strong: #54435a;
+    --purple: #c6b0f0;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+  }
+
+  body {
+    color: var(--text);
+    font-family: "M PLUS Rounded 1c", ui-rounded, system-ui, -apple-system, "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-inline: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: anywhere;
+  }
+
+  [hidden] { display: none !important; }
+
+  h1, h2 { font-weight: 800; text-wrap: balance; }
+
+  a { color: var(--accent); text-underline-offset: 3px; }
+
+  .page {
+    max-width: 700px;
+    margin-inline: auto;
+    padding-block: 48px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .mark { display: flex; align-items: center; gap: 10px; }
+
+  .mark-glyph {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    flex: none;
+  }
+
+  .mark-name { font-size: 20px; font-weight: 800; }
+
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+    background: var(--surface);
+  }
+
+  .lang-toggle button {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    color: var(--subtle);
+    padding: 6px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .lang-toggle button[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .titleblock h1 { font-size: clamp(28px, 6vw, 38px); margin: 0 0 8px; }
+
+  .meta { color: var(--subtle); font-size: 14px; font-variant-numeric: tabular-nums; }
+
+  section.policy section {
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  section.policy section:first-child { border-top: none; padding-top: 0; margin-top: 36px; }
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--purple);
+  }
+
+  section.policy p { margin: 0 0 12px; }
+  section.policy p:last-child { margin-bottom: 0; }
+  section.policy ul { margin: 0 0 12px; padding-left: 1.2em; }
+  section.policy li { margin-bottom: 6px; }
+  section.policy li strong { font-weight: 800; }
+
+  .card {
+    background: var(--soft);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin: 0 0 12px;
+  }
+
+  footer.pagefoot {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--subtle);
+    font-size: 13.5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="mark">
+      <img class="mark-glyph" src="icon.png" alt="">
+      <span class="mark-name" id="app-name">ころりーぬ</span>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language / 言語">
+      <button type="button" id="btn-ja" aria-pressed="true">日本語</button>
+      <button type="button" id="btn-en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <!-- ============================= 日本語 ============================= -->
+  <div id="lang-ja">
+
+    <div class="titleblock">
+      <h1>プライバシーポリシー</h1>
+      <div class="meta">最終更新日: 2026年11月4日</div>
+    </div>
+
+    <section class="policy">
+
+      <section>
+        <h2><span class="num">01</span>収集する情報</h2>
+        <p>「ころりーぬ」（以下「本アプリ」）は、氏名・メールアドレス・電話番号などの個人情報を収集しません。アカウント登録も不要です。ただし、広告の表示、ランキングとオンライン対戦、アプリ内課金のために外部のサービスを利用しており、その中で端末に関する技術的な情報や記録が扱われることがあります。詳しくは下記の各項目をご覧ください。</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span>広告について</h2>
+        <p>本アプリは、無料でご利用いただくために、Google社が提供する広告配信サービス「Google AdMob」を使用しています。広告は、ゴールの画面と、ボールガチャの画面で「広告を見てコインをもらう」を選んだとき（任意）に表示されます。AdMobは、広告の配信・不正防止・効果の測定のために、端末の広告識別子（IDFA）、おおよその位置情報、広告の表示・タップの履歴などの技術的な情報を取得することがあります。</p>
+        <p>初めて起動したとき、Apple社の「App Tracking Transparency」により、他社のアプリやWebサイトをまたいだトラッキング（追跡）を許可するかをお尋ねします。許可された場合は、あなたの興味・関心に合わせた広告が表示されることがあります。許可されなかった場合は、興味・関心に基づかない広告が表示されます。この設定は、iPhoneの「設定」→「プライバシーとセキュリティ」→「トラッキング」から、またはアプリの「設定」→「広告の追跡の設定をひらく」から、いつでも変更できます。</p>
+        <p>EU・イギリスなど、法令により同意が必要な地域では、初めて起動したときに、広告用のデータの扱いについて同意をお尋ねする画面（Google社の同意管理の仕組み）を表示します。同意の内容は、アプリの「設定」→「広告の同意を見直す」からいつでも見直せます。</p>
+        <p>「全コース解放パック」を購入された場合、ゴールの画面の広告は表示されません。</p>
+        <div class="card">
+          <p>AdMobによる情報の取り扱いの詳細は、Google社のプライバシーポリシーをご確認ください。<br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span>ランキングとオンライン対戦（Game Center）について</h2>
+        <p>Apple社の「Game Center」にサインインしている場合、コースをゴールするたびに、そのタイムと使ったボールを、コースごとのGame Centerのランキングに送信します。ランキングでは、タイムと使ったボールがGame Centerのニックネームとともに、ほかのプレイヤーにも表示されます。</p>
+        <p>「オンラインでたいせん」を選んだ場合は、Game Centerを通じて相手を探し、対戦の間、あなたのボールの位置・ゴールのタイム・選んだコースとボール・Game Centerのニックネームを、対戦相手の端末へ送ります。これらは対戦相手との間でのみやりとりされ、開発者のサーバーには送られません。</p>
+        <p>Game Centerへのサインインや、ランキング・対戦の情報の取り扱いは、Apple社が行います。開発者が、あなたのApple IDやメールアドレスを知ることはありません。Game Centerを使いたくない場合は、iPhoneの「設定」→「Game Center」からサインアウトしてください。コンピュータとの対戦は、インターネットを使わずに端末の中だけで行われます。</p>
+        <div class="card">
+          <p>Apple社によるデータの取り扱いの詳細は、Apple社のプライバシーポリシーをご確認ください。<br><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span>アプリ内課金について</h2>
+        <p>「全コース解放パック」の購入と、購入の復元は、Apple社のApp Storeの仕組みで行われます。お支払いの情報は開発者には届かず、開発者がクレジットカード番号などを知ることはありません。</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span>端末内に保存されるデータ</h2>
+        <p>次の情報は、お使いの端末内にのみ保存されます。開発者のサーバーへ送られることはなく、開発者を含め、ユーザー以外の誰も見ることはできません。</p>
+        <ul>
+          <li><strong>記録</strong> — コースごとの自己ベストのタイム、はじめてクリアしたかどうか、ゴースト（自己ベストのときのボールの動き）</li>
+          <li><strong>コインとボール</strong> — 持っているコイン、ガチャで手に入れたボール、使っているボール、広告を見た時刻（1時間に見られる回数を数えるため）</li>
+          <li><strong>設定</strong> — 傾きの感度、BGM・効果音・振動のオン・オフ、スタート前にコース全体を見せるか、言語</li>
+          <li><strong>購入の状態</strong> — 全コース解放パックを購入済みかどうか</li>
+        </ul>
+        <p>自己ベストとゴーストは、アプリの「設定」→「自己ベストとゴーストを消す」で消せます。アプリを削除すると、すべて消去されます。</p>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span>子どものプライバシー</h2>
+        <p>本アプリ自体は個人情報を収集しません。ただし、広告の表示のためにGoogle AdMobを、ランキングと対戦のためにGame Centerを使用しているため、お子様が利用される場合は、保護者の方が本ポリシー（特に「広告について」「ランキングとオンライン対戦について」）の内容を事前にご確認いただくことをおすすめします。</p>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span>ポリシーの変更</h2>
+        <p>本ポリシーの内容は、法令の変更やアプリの機能の追加に応じて更新されることがあります。重要な変更がある場合は、このページの「最終更新日」を更新してお知らせします。</p>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span>お問い合わせ</h2>
+        <p>本ポリシーについてご質問がある場合は、下記までご連絡ください。</p>
+        <p><a href="mailto:app.contact001@gmail.com">app.contact001@gmail.com</a></p>
+      </section>
+
+    </section>
+
+    <footer class="pagefoot">
+      <span>© 2026 ころりーぬ</span>
+      <span><a href="support.html">サポート</a> ・ app.contact001@gmail.com</span>
+    </footer>
+
+  </div>
+
+  <!-- ============================= English ============================= -->
+  <div id="lang-en" hidden>
+
+    <div class="titleblock">
+      <h1>Privacy Policy</h1>
+      <div class="meta">Last updated: November 4, 2026</div>
+    </div>
+
+    <section class="policy">
+
+      <section>
+        <h2><span class="num">01</span>Information We Collect</h2>
+        <p>Kororiinu (the "app") does not collect personal information such as your name, email address, or phone number, and no account is required. However, the app uses outside services to show ads, to run leaderboards and online races, and to handle in-app purchases, and these may handle technical information about your device and your records. See the sections below for details.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02</span>Advertising</h2>
+        <p>To keep the app free, it uses Google AdMob, an advertising service provided by Google. Ads are shown on the goal screen, and on the Ball Gacha screen when you choose to watch an ad for coins (optional). AdMob may collect technical information such as your device's advertising identifier (IDFA), approximate location, and the history of ads shown and tapped, in order to deliver ads, prevent fraud, and measure performance.</p>
+        <p>The first time you open the app, Apple's App Tracking Transparency asks whether you allow tracking across other companies' apps and websites. If you allow it, you may see ads based on your interests. If you do not, you will see ads that are not based on your interests. You can change this at any time in the iPhone Settings app under Privacy &amp; Security &rarr; Tracking, or in the app under Settings &rarr; Open ad tracking settings.</p>
+        <p>In regions where consent is required by law, such as the EU and the UK, the app shows a screen the first time you open it (Google's consent management tool) asking for your consent to how ad data is used. You can review your choices at any time in the app under Settings &rarr; Review ad consent.</p>
+        <p>If you buy the All Courses Pack, ads are no longer shown on the goal screen.</p>
+        <div class="card">
+          <p>For details on how AdMob handles information, please see Google's Privacy Policy.<br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">03</span>Leaderboards and Online Races (Game Center)</h2>
+        <p>If you are signed in to Apple's Game Center, each time you finish a course the app sends your time and the ball you used to that course's Game Center leaderboard. On the leaderboard, your time and ball are shown to other players together with your Game Center nickname.</p>
+        <p>If you choose "Race online", the app finds an opponent through Game Center. During the race, it sends your ball's position, your finish time, the course and ball you chose, and your Game Center nickname to your opponent's device. This information is exchanged only with your opponent and is never sent to the developer's servers.</p>
+        <p>Signing in to Game Center and the handling of leaderboard and race information are managed by Apple. The developer never learns your Apple ID or email address. If you do not want to use Game Center, sign out in the iPhone Settings app under Game Center. Races against the computer run entirely on your device without using the internet.</p>
+        <div class="card">
+          <p>For details on how Apple handles data, please see Apple's Privacy Policy.<br><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">04</span>In-App Purchases</h2>
+        <p>Buying the All Courses Pack and restoring purchases are handled by Apple's App Store. Your payment information is never sent to the developer, and the developer never learns your credit card number or similar details.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05</span>Data Stored on Your Device</h2>
+        <p>The following information is stored only on your device. It is never sent to the developer's servers, and no one but you, including the developer, can see it.</p>
+        <ul>
+          <li><strong>Records</strong> &mdash; your personal best time for each course, whether you have cleared it, and ghosts (how your ball moved on your best run)</li>
+          <li><strong>Coins and balls</strong> &mdash; your coins, the balls you got from the gacha, the ball you are using, and when you watched ads (to count how many you can watch per hour)</li>
+          <li><strong>Settings</strong> &mdash; tilt sensitivity, whether BGM, sounds, and vibration are on, whether to show the whole course before the start, and language</li>
+          <li><strong>Purchase status</strong> &mdash; whether you have bought the All Courses Pack</li>
+        </ul>
+        <p>You can delete your personal bests and ghosts in the app under Settings &rarr; Delete bests &amp; ghosts. Deleting the app removes all of this data.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">06</span>Children's Privacy</h2>
+        <p>The app itself does not collect personal information. However, because it uses Google AdMob to show ads and Game Center for leaderboards and races, we recommend that parents review this policy (especially "Advertising" and "Leaderboards and Online Races") before a child uses the app.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">07</span>Changes to This Policy</h2>
+        <p>This policy may be updated in response to changes in law or new app features. If there is an important change, we will update the "Last updated" date on this page.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">08</span>Contact</h2>
+        <p>If you have any questions about this policy, please contact us at:</p>
+        <p><a href="mailto:app.contact001@gmail.com">app.contact001@gmail.com</a></p>
+      </section>
+
+    </section>
+
+    <footer class="pagefoot">
+      <span>© 2026 Kororiinu</span>
+      <span><a href="support.html">Support</a> ・ app.contact001@gmail.com</span>
+    </footer>
+
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    var ja = document.getElementById('lang-ja');
+    var en = document.getElementById('lang-en');
+    var btnJa = document.getElementById('btn-ja');
+    var btnEn = document.getElementById('btn-en');
+    var name = document.getElementById('app-name');
+
+    function show(lang) {
+      var isJa = lang === 'ja';
+      ja.hidden = !isJa;
+      en.hidden = isJa;
+      name.textContent = isJa ? 'ころりーぬ' : 'Kororiinu';
+      document.documentElement.lang = lang;
+      btnJa.setAttribute('aria-pressed', String(isJa));
+      btnEn.setAttribute('aria-pressed', String(!isJa));
+      try { localStorage.setItem('kororiinu-privacy-lang', lang); } catch (e) {}
+    }
+
+    btnJa.addEventListener('click', function () { show('ja'); });
+    btnEn.addEventListener('click', function () { show('en'); });
+
+    var saved = null;
+    try { saved = localStorage.getItem('kororiinu-privacy-lang'); } catch (e) {}
+    if (saved === 'en' || (!saved && /^en/i.test(navigator.language || ''))) show('en');
+    else show('ja');
+  })();
+</script>

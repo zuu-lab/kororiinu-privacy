@@ -1,0 +1,332 @@
+<!doctype html>
+<title>ころりーぬ Support</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fff8fb;
+    --surface: #ffffff;
+    --text: #4a3a48;
+    --subtle: #8a7887;
+    --accent: #e8739c;
+    --on-accent: #ffffff;
+    --soft: #fbe3ec;
+    --line: #f3dde6;
+    --line-strong: #e9c3d3;
+    --purple: #b79be8;
+    color-scheme: light;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1720;
+      --surface: #261f2a;
+      --text: #f1e6ee;
+      --subtle: #b3a2b0;
+      --accent: #f08db0;
+      --on-accent: #2a1c24;
+      --soft: #3a2a35;
+      --line: #3a2f3d;
+      --line-strong: #54435a;
+      --purple: #c6b0f0;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1c1720;
+    --surface: #261f2a;
+    --text: #f1e6ee;
+    --subtle: #b3a2b0;
+    --accent: #f08db0;
+    --on-accent: #2a1c24;
+    --soft: #3a2a35;
+    --line: #3a2f3d;
+    --line-strong: #54435a;
+    --purple: #c6b0f0;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+  }
+
+  body {
+    color: var(--text);
+    font-family: "M PLUS Rounded 1c", ui-rounded, system-ui, -apple-system, "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-inline: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: anywhere;
+  }
+
+  [hidden] { display: none !important; }
+
+  h1, h2 { font-weight: 800; text-wrap: balance; }
+
+  a { color: var(--accent); text-underline-offset: 3px; }
+
+  .page {
+    max-width: 700px;
+    margin-inline: auto;
+    padding-block: 48px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .mark { display: flex; align-items: center; gap: 10px; }
+
+  .mark-glyph {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    flex: none;
+  }
+
+  .mark-name { font-size: 20px; font-weight: 800; }
+
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+    background: var(--surface);
+  }
+
+  .lang-toggle button {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    color: var(--subtle);
+    padding: 6px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .lang-toggle button[aria-pressed="true"] {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .titleblock h1 { font-size: clamp(28px, 6vw, 38px); margin: 0 0 8px; }
+
+  .meta { color: var(--subtle); font-size: 14px; font-variant-numeric: tabular-nums; }
+
+  section.policy section {
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  section.policy section:first-child { border-top: none; padding-top: 0; margin-top: 36px; }
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--purple);
+  }
+
+  section.policy p { margin: 0 0 12px; }
+  section.policy p:last-child { margin-bottom: 0; }
+  section.policy ul { margin: 0 0 12px; padding-left: 1.2em; }
+  section.policy li { margin-bottom: 6px; }
+  section.policy li strong { font-weight: 800; }
+
+  .card {
+    background: var(--soft);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin: 0 0 12px;
+  }
+
+  footer.pagefoot {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--subtle);
+    font-size: 13.5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="mark">
+      <img class="mark-glyph" src="icon.png" alt="">
+      <span class="mark-name" id="app-name">ころりーぬ</span>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language / 言語">
+      <button type="button" id="btn-ja" aria-pressed="true">日本語</button>
+      <button type="button" id="btn-en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <div id="lang-ja">
+
+    <div class="titleblock">
+      <h1>サポート</h1>
+      <div class="meta">ころりーぬ（iOS）についてのお問い合わせ・よくある質問</div>
+    </div>
+
+    <section class="policy">
+
+      <section>
+        <h2><span class="num">01</span>お問い合わせ</h2>
+        <p>アプリの不具合の報告・ご要望・そのほかのご質問は、下記のメールアドレスまでご連絡ください。内容を確認し、順次対応いたします。</p>
+        <p><a href="mailto:app.contact001@gmail.com">app.contact001@gmail.com</a></p>
+      </section>
+      <section>
+        <h2><span class="num">02</span>遊び方</h2>
+        <p>iPhoneを傾けてボールを転がし、ゴールまで運びます。コースを選んで「あそぶ」を押し、遊びやすい角度でiPhoneを持って「この角度でスタート」を押すと、その角度が「水平」になります。</p>
+        <p>傾きの効き方は、アプリの「設定」→「傾きの感度」や、遊んでいる途中の一時停止の画面で変えられます。</p>
+      </section>
+      <section>
+        <h2><span class="num">03</span>コインとボールガチャ</h2>
+        <p>コインは、コースをはじめてクリアしたとき（コースの★の数×10コイン）、ボールガチャの画面で広告を見たとき（1回10コイン・1時間に5回まで）、週間ランキングで5位までに入ったとき（次の週にもらえます）に手に入ります。コインは、ボールガチャ（1回500コイン）で使えます。ガチャからは、まだ持っていないボールが出ます。</p>
+      </section>
+      <section>
+        <h2><span class="num">04</span>全コース解放パック・購入の復元</h2>
+        <p>「全コース解放パック」を買うと、有料のコースがすべて遊べるようになり、ゴールの画面の広告がなくなります（買い切りです）。機種変更やアプリの入れ直しのあとは、アプリの「設定」→「購入を復元する」で、もう一度お支払いをすることなく元に戻せます。購入したときと同じApple IDでサインインしていることを確認してください。</p>
+      </section>
+      <section>
+        <h2><span class="num">05</span>ランキングに表示されない・対戦の相手が見つからない</h2>
+        <p>ランキングとオンライン対戦は、Apple社の「Game Center」を使っています。iPhoneの「設定」→「Game Center」でサインインしていることを確認してください。サインインしていない間にゴールしたタイムは、ランキングに送られません。オンラインの相手が見つからないときは、「コンピュータとたいせん」でも遊べます。</p>
+      </section>
+      <section>
+        <h2><span class="num">06</span>記録が消えた</h2>
+        <p>自己ベスト・ゴースト・コイン・ボールは、お使いの端末の中にだけ保存されています。アプリを削除すると消えてしまい、機種変更のときに引き継ぐこともできません。Game Centerのランキングに送られたタイムは、Game Centerに残ります。</p>
+      </section>
+      <section>
+        <h2><span class="num">07</span>音・振動を止めたい</h2>
+        <p>アプリの「設定」で、BGM・効果音・ぶつかった時の振動を、それぞれオン・オフできます。</p>
+      </section>
+      <section>
+        <h2><span class="num">08</span>広告について</h2>
+        <p>本アプリは、無料でご利用いただくために、ゴールの画面などで広告を表示しています。広告の取り扱いについては、<a href="index.html">プライバシーポリシー</a>の「広告について」をご覧ください。</p>
+      </section>
+
+    </section>
+
+    <footer class="pagefoot">
+      <span>© 2026 ころりーぬ</span>
+      <span><a href="index.html">プライバシーポリシー</a> ・ app.contact001@gmail.com</span>
+    </footer>
+
+  </div>
+
+  <div id="lang-en" hidden>
+
+    <div class="titleblock">
+      <h1>Support</h1>
+      <div class="meta">Contact and FAQ for Kororiinu (iOS)</div>
+    </div>
+
+    <section class="policy">
+
+      <section>
+        <h2><span class="num">01</span>Contact</h2>
+        <p>For bug reports, requests, or any other questions about the app, please email us at the address below. We will review your message and respond in turn.</p>
+        <p><a href="mailto:app.contact001@gmail.com">app.contact001@gmail.com</a></p>
+      </section>
+      <section>
+        <h2><span class="num">02</span>How to Play</h2>
+        <p>Tilt your iPhone to roll the ball to the goal. Pick a course and tap "Play", hold your iPhone at a comfortable angle, and tap "Start at this angle". That angle becomes "level".</p>
+        <p>You can change how strongly the tilt works in the app under Settings &rarr; Tilt sensitivity, or on the pause screen during a game.</p>
+      </section>
+      <section>
+        <h2><span class="num">03</span>Coins and the Ball Gacha</h2>
+        <p>You get coins when you clear a course for the first time (10 coins &times; the course's stars), when you watch an ad on the Ball Gacha screen (10 coins each, up to 5 times an hour), and when you place in the top 5 of a weekly ranking (paid out the next week). Spend coins on the Ball Gacha (500 coins a spin). The gacha always gives you a ball you don't have yet.</p>
+      </section>
+      <section>
+        <h2><span class="num">04</span>All Courses Pack and Restoring Purchases</h2>
+        <p>The All Courses Pack unlocks every paid course and removes ads from the goal screen. It is a one-time purchase. After changing phones or reinstalling the app, tap Settings &rarr; Restore purchases to get it back without paying again. Make sure you are signed in with the same Apple ID you bought it with.</p>
+      </section>
+      <section>
+        <h2><span class="num">05</span>Not on the Leaderboard / No Online Opponent</h2>
+        <p>Leaderboards and online races use Apple's Game Center. Make sure you are signed in under Game Center in the iPhone Settings app. Times from runs while you were signed out are not sent to the leaderboard. If no online opponent is found, you can also race the computer.</p>
+      </section>
+      <section>
+        <h2><span class="num">06</span>My Records Are Gone</h2>
+        <p>Personal bests, ghosts, coins, and balls are stored only on your device. Deleting the app removes them, and they cannot be transferred to a new phone. Times sent to the Game Center leaderboard stay in Game Center.</p>
+      </section>
+      <section>
+        <h2><span class="num">07</span>Turning Off Sound or Vibration</h2>
+        <p>In the app's Settings, you can turn BGM, sounds, and vibration on bumps on or off separately.</p>
+      </section>
+      <section>
+        <h2><span class="num">08</span>Advertising</h2>
+        <p>To keep the app free, it shows ads, such as on the goal screen. For how ads handle information, please see "Advertising" in the <a href="index.html">Privacy Policy</a>.</p>
+      </section>
+
+    </section>
+
+    <footer class="pagefoot">
+      <span>© 2026 Kororiinu</span>
+      <span><a href="index.html">Privacy Policy</a> ・ app.contact001@gmail.com</span>
+    </footer>
+
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    var ja = document.getElementById('lang-ja');
+    var en = document.getElementById('lang-en');
+    var btnJa = document.getElementById('btn-ja');
+    var btnEn = document.getElementById('btn-en');
+    var name = document.getElementById('app-name');
+
+    function show(lang) {
+      var isJa = lang === 'ja';
+      ja.hidden = !isJa;
+      en.hidden = isJa;
+      name.textContent = isJa ? 'ころりーぬ' : 'Kororiinu';
+      document.documentElement.lang = lang;
+      btnJa.setAttribute('aria-pressed', String(isJa));
+      btnEn.setAttribute('aria-pressed', String(!isJa));
+      try { localStorage.setItem('kororiinu-privacy-lang', lang); } catch (e) {}
+    }
+
+    btnJa.addEventListener('click', function () { show('ja'); });
+    btnEn.addEventListener('click', function () { show('en'); });
+
+    var saved = null;
+    try { saved = localStorage.getItem('kororiinu-privacy-lang'); } catch (e) {}
+    if (saved === 'en' || (!saved && /^en/i.test(navigator.language || ''))) show('en');
+    else show('ja');
+  })();
+</script>
